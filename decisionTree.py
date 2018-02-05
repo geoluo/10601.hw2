@@ -52,10 +52,28 @@ def information_gain(parsed_data, attribute1, res):
     for key in divided_list:
         s = divided_list[key]
         entropy2 += entropy(s) * len(s) / len(r)
+    # print(entropy1 - entropy2, attribute1, res)
     return entropy1 - entropy2
 
 
-def divide(parsed_data, attributes, remain_levels):
+def divide(parsed_data, attributes, remain_levels, depth=1, all_available_values=[]):
+    # print("pd")
+    # print(parsed_data)
+    if depth == 1:
+        tmp = {}
+        for x in parsed_data[attributes[-1]]:
+            if x in tmp:
+                tmp[x] += 1
+            else:
+                tmp[x] = 1
+        k = [x for x in tmp]
+        k.sort()
+        stdout = "["
+        for x in k:
+            stdout = stdout + str(tmp[x]) + " " + x + " /"
+        stdout = stdout[:-2] + "]"
+        print(stdout)
+        all_available_values = k
     if remain_levels >= len(attributes):
         remain_levels = len(attributes) - 1
     if remain_levels == 0:
@@ -104,8 +122,30 @@ def divide(parsed_data, attributes, remain_levels):
                 if key != c_name:
                     divided_data[x][key] = [parsed_data[key][i]]
     r = Node(c_name)
+    dividing_value.sort()
     r.dividing_value = dividing_value
-    r.divided_node = [divide(divided_data[x], next_attributes, remain_levels - 1) for x in dividing_value]
+    # r.divided_node = [divide(divided_data[x], next_attributes, remain_levels - 1, depth + 1) for x in dividing_value]
+    for x_val in dividing_value:
+        tmp = {}
+        for i, y in enumerate(parsed_data[c_name]):
+            if y == x_val:
+                t2 = parsed_data[attributes[-1]][i]
+                if t2 in tmp:
+                    tmp[t2] += 1
+                else:
+                    tmp[t2] = 1
+        k = [x for x in tmp]
+        k.sort()
+        stdout = "| " * depth + c_name + " = " + x_val + ": ["
+        for x in all_available_values:
+            if x in k:
+                stdout = stdout + str(tmp[x]) + " " + x + " /"
+            else:
+                stdout = stdout + "0" + " " + x + " /"
+
+        stdout = stdout[:-2] + "]"
+        print(stdout)
+        r.divided_node.append(divide(divided_data[x_val], next_attributes, remain_levels - 1, depth + 1, all_available_values))
     return r
 
 
@@ -131,9 +171,11 @@ def forward(root, att_val_dict):
         for i, x in enumerate(root.dividing_value):
             if att_val_dict[root.divide_by] == x:
                 return forward(root.divided_node[i], att_val_dict)
+            return "error"
 
 
-def output_labels(root, i_file_name):
+def output_labels(root, i_file_name, o_file_name):
+    out = []
     with open(i_file_name, 'r') as i_file:
         data = list(csv.reader(i_file))
         attributes = data[0]
@@ -141,12 +183,21 @@ def output_labels(root, i_file_name):
             tmp = {}
             for j, y in enumerate(attributes):
                 tmp[y] = x[j]
-            print(forward(root, tmp))
+            out.append(forward(root, tmp))
+    with open(o_file_name, "w+") as o_file:
+        for line in out:
+            o_file.write(line + '\n')
+
+
+# def output_metrics(root, train_file, test_file, o_file_name):
+
 
 
 def decision_tree():
     root = training()
-    output_labels(root, test_input)
+    output_labels(root, train_input, train_out)
+    output_labels(root, test_input, test_out)
+    print('done')
 
 
 if __name__ == '__main__':
