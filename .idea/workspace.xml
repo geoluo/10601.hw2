@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3c9c8f-fb38-47b3-a9ae-c7dbdb0cfc6d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/program.iml" afterPath="$PROJECT_DIR$/.idea/program.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/decisionTree.py" afterPath="$PROJECT_DIR$/decisionTree.py" />
+      <change beforePath="$PROJECT_DIR$/edu_3_test.lable" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edu_3_train.lable" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/small_3_test.lable" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/small_3_train.lable" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,23 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="inspect.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inspect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decisionTree.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="decisionTree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decisionTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="186" column="43" lean-forward="true" selection-start-line="186" selection-start-column="43" selection-end-line="186" selection-end-column="43" />
+            <state relative-caret-position="-7">
+              <caret line="202" column="20" lean-forward="true" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -40,8 +31,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edu_3_test.lable" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu_3_test.lable">
+      <file leaf-file-name="small_3_metrics.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/out/small_3_metrics.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -50,8 +41,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edu_3_train.lable" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu_3_train.lable">
+      <file leaf-file-name="out1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/out1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="small_inspect.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handout/example_output/small_inspect.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -75,16 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="out1.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -192,8 +183,8 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/small_3_train.lable" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/out/small_3_train.lable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/handout/example_output/small_3_metrics.txt" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/handout/example_output/small_3_metrics.txt" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,22 +297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/small_3_train.lable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/small_3_test.lable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inspect.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -336,22 +311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/my_train.lable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/my_test.lable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -372,13 +331,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/my_test.lable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/my_train.lable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/small_3_train.lable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/small_3_test.lable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/small_3_metrics.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/small_3_test.lable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/small_3_train.lable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/decisionTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="186" column="43" lean-forward="true" selection-start-line="186" selection-start-column="43" selection-end-line="186" selection-end-column="43" />
+        <state relative-caret-position="-7">
+          <caret line="202" column="20" lean-forward="true" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/out1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handout/example_output/small_inspect.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/small_3_metrics.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

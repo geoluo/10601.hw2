@@ -171,7 +171,7 @@ def forward(root, att_val_dict):
         for i, x in enumerate(root.dividing_value):
             if att_val_dict[root.divide_by] == x:
                 return forward(root.divided_node[i], att_val_dict)
-            return "error"
+        return "error"
 
 
 def output_labels(root, i_file_name, o_file_name):
@@ -189,15 +189,47 @@ def output_labels(root, i_file_name, o_file_name):
             o_file.write(line + '\n')
 
 
-# def output_metrics(root, train_file, test_file, o_file_name):
-
-
-
+def output_metrics(root, train_file, test_file, o_file_name):
+    in_tr_data, in_tr_attr = parse_data(train_file)
+    in_tr = in_tr_data[in_tr_attr[-1]]
+    in_te_data, in_te_attr = parse_data(test_file)
+    in_te = in_te_data[in_te_attr[-1]]
+    out_tr = []
+    out_te = []
+    with open(train_file, 'r') as tr_file:
+        data = list(csv.reader(tr_file))
+        attributes = data[0]
+        for i, x in enumerate(data[1:]):
+            tmp = {}
+            for j, y in enumerate(attributes):
+                tmp[y] = x[j]
+            out_tr.append(forward(root, tmp))
+    with open(test_file, 'r') as te_file:
+        data = list(csv.reader(te_file))
+        attributes = data[0]
+        for i, x in enumerate(data[1:]):
+            tmp = {}
+            for j, y in enumerate(attributes):
+                tmp[y] = x[j]
+            out_te.append(forward(root, tmp))
+    e1 = 0
+    e2 = 0
+    for i in range(len(out_tr)):
+        if in_tr[i] != out_tr[i]:
+            e1 += 1.0/ len(out_tr)
+    for i in range(len(out_te)):
+        if in_te[i] != out_te[i]:
+            e2 += 1.0/ len(out_te)
+    with open(o_file_name, "w+") as o_file:
+        o_file.write("error(train): " + str(e1) + "\n")
+        o_file.write("error(test): " + str(e2) + "\n")
 def decision_tree():
-    root = training()
+    parsed_data, attributes = parse_data(train_input)
+    root = divide(parsed_data, attributes, max_depth)
+    #root = training()
     output_labels(root, train_input, train_out)
     output_labels(root, test_input, test_out)
-    print('done')
+    output_metrics(root,train_input,test_input,metric_out)
 
 
 if __name__ == '__main__':
