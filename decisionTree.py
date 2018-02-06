@@ -102,6 +102,7 @@ def divide(parsed_data, attributes, remain_levels, depth=1, all_available_values
         return r
     c_max = 0
     c_name = ""
+    # print(parsed_data)
     for name in attributes[: -1]:
         ig = information_gain(parsed_data, name, attributes[-1])
         if ig > c_max:
@@ -110,6 +111,26 @@ def divide(parsed_data, attributes, remain_levels, depth=1, all_available_values
     next_attributes = [x for x in attributes if x != c_name]
     divided_data = {}
     dividing_value = []
+
+    if c_name == "":
+        r = Node(attributes[-1])
+        r.is_leaf = True
+        tmp = parsed_data[attributes[-1]]
+        tmp_map = {}
+        for x in tmp:
+            if x in tmp_map:
+                tmp_map[x] += 1
+            else:
+                tmp_map[x] = 1
+        c_max = 0
+        c_name = ""
+        for key in tmp_map:
+            if tmp_map[key] > c_max:
+                c_max = tmp_map[key]
+                c_name = key
+        r.predict = c_name
+        return r
+
     for i, x in enumerate(parsed_data[c_name]):
         if x in divided_data:
             for key in parsed_data:
@@ -225,7 +246,8 @@ def output_metrics(root, train_file, test_file, o_file_name):
         o_file.write("error(test): " + str(e2) + "\n")
 def decision_tree():
     parsed_data, attributes = parse_data(train_input)
-    root = divide(parsed_data, attributes, max_depth)
+    m_depth = min(max_depth, len(parsed_data[attributes[-1]]))
+    root = divide(parsed_data, attributes, m_depth)
     #root = training()
     output_labels(root, train_input, train_out)
     output_labels(root, test_input, test_out)
